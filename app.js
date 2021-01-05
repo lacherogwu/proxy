@@ -6,7 +6,7 @@ app.set('trust proxy', true);
 
 app.get('/healthcheck', (req, res) => {
     console.log(req.ip);
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: true, ip: req.ip });
 });
 
 
