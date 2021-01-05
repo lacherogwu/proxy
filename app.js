@@ -2,6 +2,7 @@ const express = require('express');
 
 const app = express();
 
+app.set('trust proxy', true);
 
 app.get('/healthcheck', (req, res) => {
     console.log(req.ip);
